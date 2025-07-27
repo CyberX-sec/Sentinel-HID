@@ -130,7 +130,7 @@ def start_monitor():
     monitor = pyudev.Monitor.from_netlink(context)
     monitor.filter_by("usb")
 
-    print("[*] HID Keystroke Monitor is running...")
+    print("[*] Sentinel-HID is running...")
 
     for device in iter(monitor.poll, None):
         if device.action == "add":
